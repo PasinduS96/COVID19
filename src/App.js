@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Hospital from "../Hospital";
-import Home from "../Home";
+import Hospital from "./components/Hospital";
+import Home from "./components/Home";
 
-import Navbar from "../Navbar";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
