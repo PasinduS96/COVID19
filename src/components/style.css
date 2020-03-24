@@ -101,7 +101,7 @@ body,
   position: relative;
   height: 970px;
   overflow: auto;
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 20px;
 }
 .table-wrapper-scroll-y {
@@ -111,7 +111,7 @@ body,
 .my-custom-scrollbar1 {
   position: relative;
   height: 360px;
-  overflow: auto;
+  overflow: scroll;
   padding: 40px;
 }
 
