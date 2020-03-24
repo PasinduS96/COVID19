@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { VectorMap } from "@south-paw/react-vector-maps";
 
 import world from "./world.json";
-import { getAWS } from "../../service";
+import { getAWS, getLocal } from "../../service";
 
 const Mapz = styled.div`
   margin: 1rem auto;
@@ -24,9 +24,9 @@ const Mapz = styled.div`
       }
 
       // When a layer is focused.
-      &:focus {
-        fill: rgba(168, 43, 43, 0.6);
-      }
+      // &:focus {
+      //   fill: rgba(168, 43, 43, 0.6);
+      // }
 
       // When a layer is 'checked' (via checkedLayers prop).
       &[aria-checked="true"] {
@@ -61,8 +61,8 @@ const Maps = props => {
   useEffect(() => {
     getAWS().then(data => {
       setData(data.prefectures);
-      setHovered(data.prefectures[0].cases);
       setTotal(data.prefectures[0].cases);
+      setHovered(data.prefectures[0].cases);
     });
   }, []);
 
@@ -88,9 +88,14 @@ const Maps = props => {
 
   return (
     <div style={style} align="left">
-      <h3 className="text-center">
-        ශ්‍රි ලංකාවේ දිස්ත්‍රික් අනුව වාර්තාගත රෝගින්
-      </h3>
+      ‍
+      <div className="text-center">
+        <h3>ශ්‍රි ලංකාවේ දිස්ත්‍රික් අනුව වාර්තාගත රෝගීන්</h3>
+        <small>
+          (අවශ්‍ය දිස්ත්‍රික්කය වෙත මවුසය රැගෙන යාමෙත් / ස්පර්ශ කිරිමෙන් අවශ්‍ය
+          තොරතුරු දර්ශනය​වේ)
+        </small>
+      </div>
       <br />
       <Mapz>
         <VectorMap {...world} layerProps={layerProps} />
@@ -99,7 +104,7 @@ const Maps = props => {
           දිස්ත්‍රික්කය:{" "}
           {hovered1 && <code style={{ marginLeft: 10 }}>{hovered1}</code>}
           <br />
-          දැනට තහවුරු කරගත් රෝගින්:{" "}
+          දැනට තහවුරු කරගත් රෝගීන්:{" "}
           {hovered && <code style={{ marginLeft: 10 }}>{hovered}</code>}
         </h5>
       </Mapz>

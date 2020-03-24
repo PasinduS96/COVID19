@@ -28,30 +28,42 @@ const Index = props => {
   }, []);
 
   const newCases = () => {
+    console.log(confirmed);
+
     return confirmed - prev;
   };
 
   return (
-    <div className="margin card-deck" align="left">
-      <div class="card text-white bg-danger mb-4" style={{ minWidth: "18rem" }}>
+    <div class="card-group">
+      <div
+        class="card text-white text-center bg-danger"
+        style={{ minWidth: "18rem" }}
+      >
         <div class="card-body">
-          <h5 class="card-title">සක්‍රිය රෝගින්</h5>
+          <h5 class="card-title">සක්‍රිය රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={confirmed} />
           </h1>
         </div>
       </div>
 
-      <div class="card text-white bg-dark mb-3" style={{ minWidth: "18rem" }}>
+      <div
+        class="card text-white text-center bg-dark"
+        style={{ minWidth: "18rem" }}
+      >
         <div class="card-body">
-          <h5 class="card-title">නව ආසාදිත රෝගින්</h5>
+          <h5 class="card-title">හදුනාගත් නව ආසාදිත රෝගීන්</h5>
+
           <h1 class="card-text">
             <CountUp end={newCases()} />
           </h1>
         </div>
       </div>
 
-      <div class="card text-white bg-info mb-3" style={{ minWidth: "18rem" }}>
+      <div
+        class="card text-white text-center bg-info"
+        style={{ minWidth: "18rem" }}
+      >
         <div class="card-body">
           <h5 class="card-title">මරණ</h5>
           <h1 class="card-text">
@@ -61,11 +73,11 @@ const Index = props => {
       </div>
 
       <div
-        class="card text-white bg-primary mb-3"
+        class="card text-white text-center bg-primary"
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">
-          <h5 class="card-title">අසාධ්‍ය රෝගින්</h5>
+          <h5 class="card-title">අසාධ්‍ය රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={critical} />
           </h1>
@@ -73,22 +85,22 @@ const Index = props => {
       </div>
 
       <div
-        class="card text-white bg-success mb-3"
+        class="card text-white text-center bg-success"
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">
-          <h5 class="card-title">සුවයට පත් රෝගින්</h5>
+          <h5 class="card-title">සුවයට පත් රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={recovered} />
           </h1>
         </div>
       </div>
       <div
-        class="card text-white bg-secondary mb-3"
+        class="card text-white text-center bg-secondary"
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">
-          <h5 class="card-title">පරික්ෂාවට පත් රෝගින්</h5>
+          <h5 class="card-title">පරික්ෂාවට පත් රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={tested} />
           </h1>
@@ -96,11 +108,12 @@ const Index = props => {
       </div>
 
       <div
-        class="card text-white bg-warning mb-3"
-        style={{ minWidth: "18rem" }}
+        class="card text-center text-white"
+        text-center
+        style={{ minWidth: "18rem", backgroundColor: "#F1C40F" }}
       >
         <div class="card-body">
-          <h5 class="card-title">සැක සහිත රෝගින්</h5>
+          <h5 class="card-title">සැක සහිත රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={doubt} />
           </h1>

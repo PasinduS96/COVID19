@@ -1,37 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style.css";
+import logo from "../../img/Logo.png";
+import Button from "react-bootstrap/Button";
+import Modal from "../Contacts";
 
 const Navbar = () => {
   return (
-    <div className="">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">
-          COVID19 ව්‍යාප්තිය - ශ්‍රි ලංකාවේ නවතම තොරතුරු
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src={logo} className="link-logo" alt="" />
+      </a>
+      <div>
+        <a href="/HealthAdvices" class="btn btn-outline-danger">
+          <b>කොරෝනා ගැන දැනගන්න, ප්‍රවේශම් වන්න!</b>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto" style={{ float: "right" }}>
-            <a
-              class="nav-item nav-link"
-              href="https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd"
-              target="_blank"
-            >
-              ලෝක සෞඛ්‍ය සංවිධානයේ තොරතුරු
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
