@@ -5,10 +5,10 @@ import "../style.css";
 
 export default function Index() {
   const style = {
-    marginLeft: "auto",
-    marginRight: "auto",
-    overflow: "auto",
-    marginBottom: "8rem"
+    marginLeft: "0 auto",
+    marginRight: "0 auto",
+    marginBottom: "15%",
+    marginTop: "10%"
   };
 
   const [hospitals, setHospitals] = useState([]);
@@ -20,7 +20,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div>
+    <div style={style}>
       <h3 className="text-center">
         ශ්‍රි ලංකාවේ රෝහල් ආශ්‍රිත රෝගය පිළිබද සැකපිට නේවාසිකව ප්‍රතිකාර ලබන්නන්
         සහ

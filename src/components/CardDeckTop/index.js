@@ -34,7 +34,7 @@ const Index = props => {
   };
 
   return (
-    <div class="card-group">
+    <div class="card-group" style={{ marginTop: "8rem", marginLeft: "auto" }}>
       <div
         class="card text-white text-center bg-danger"
         style={{ minWidth: "18rem" }}
@@ -61,7 +61,7 @@ const Index = props => {
       </div>
 
       <div
-        class="card text-white text-center bg-info"
+        class="card text-white text-center bg-secondary"
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">
@@ -96,7 +96,7 @@ const Index = props => {
         </div>
       </div>
       <div
-        class="card text-white text-center bg-secondary"
+        class="card text-white text-center bg-info"
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">

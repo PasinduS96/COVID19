@@ -50,7 +50,9 @@ const Maps = props => {
   const style = {
     marginLeft: "auto",
     marginRight: "auto",
-    display: "70%"
+    display: "100%",
+    marginBottom: "8%",
+    marginToo: "20%"
   };
 
   const [hovered1, setHovered1] = useState("All Island");

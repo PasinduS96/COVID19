@@ -56,8 +56,9 @@ export default function what() {
         src={banner}
         alt="Covid"
         style={{
-          marginLeft: "40px",
-          width: "50rem",
+          marginLeft: "0 auto",
+          marginRight: "0 auto",
+          width: "100%",
           marginBottom: "40px"
         }}
       />

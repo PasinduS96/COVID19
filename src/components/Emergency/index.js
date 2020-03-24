@@ -4,7 +4,12 @@ export default function index() {
   return (
     <div
       class="card"
-      style={{ width: "30rem", marginLeft: "5rem", marginTop: "40px" }}
+      style={{
+        marginTop: "5%",
+        marginBottom: "5%",
+        float: "center",
+        height: "29rem"
+      }}
     >
       <div class="card-header bg-danger text-white text-center">
         <h3>අත්‍යාවශ්‍ය හදිසි ඇමතුම් අං​ක</h3>

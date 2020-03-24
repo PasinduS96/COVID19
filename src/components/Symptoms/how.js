@@ -5,7 +5,7 @@ import sick from "../../img/1956754.png";
 
 export default function what() {
   return (
-    <div style={{ fontSize: "20px" }}>
+    <div style={{ fontSize: "20px", padding: "40px" }}>
       <p>
         <b>
           වෛරසය පැතිරියන කාල වකවානුව තුල ජනාකීර්ණ වු ප්‍රදේශ වල ගැවසිමෙන්
@@ -20,8 +20,9 @@ export default function what() {
         src={banner}
         alt="Covid"
         style={{
-          marginLeft: "200px",
-          width: "30rem",
+          marginLeft: "0 auto",
+          marginRight: "0 auto",
+          width: "100%",
           marginBottom: "40px"
         }}
       />
@@ -35,8 +36,9 @@ export default function what() {
         src={hand}
         alt="Covid"
         style={{
-          marginLeft: "200px",
-          width: "30rem",
+          marginLeft: "0 auto",
+          marginRight: "0 auto",
+          width: "100%",
           marginBottom: "40px"
         }}
       />

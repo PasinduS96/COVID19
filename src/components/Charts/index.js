@@ -64,7 +64,7 @@ const Index = props => {
             "rgba(255, 206, 86, 1)"
           ],
           data: [first, second, third, fourth, fifith, last],
-          borderWidth: 1
+          borderWidth: 2
         }
       ]
     });
@@ -83,11 +83,12 @@ const Index = props => {
   return (
     <div
       style={{
-        position: "relative",
-        width: "40rem",
-        height: "15rem",
-        marginLeft: "5rem",
-        marginRight: "5rem"
+        width: "100%",
+        height: "70%",
+        marginLeft: "0 auto",
+        marginRight: "0 auto",
+        marginTop: "2rem",
+        marginBottom: "15%"
       }}
     >
       <div className="text-center">

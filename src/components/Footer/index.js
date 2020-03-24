@@ -5,18 +5,21 @@ var style = {
   backgroundColor: "#F8F8F8",
   borderTop: "2px solid #E7E7E7",
   textAlign: "center",
-  padding: "20px",
+  paddingTop: "10px",
+  paddingLeft: "8px",
+  paddingRight: "8px",
   position: "fixed",
   left: "0",
   bottom: "0",
   height: "100px",
-  width: "100%"
+  width: "100%",
+  paddingBottom: "10px"
 };
 
 var phantom = {
   display: "block",
-  padding: "20px",
-  height: "150px",
+  padding: "10px",
+  height: "100px",
   width: "100%"
 };
 
@@ -33,7 +36,7 @@ function Footer({ children }) {
           </h6>
         </div>
         <div>
-          <div class="footer-copyright text-center py-3">
+          <div class="footer-copyright text-center">
             © 2020 Copyright -
             <a
               href="https://www.linkedin.com/in/pasindu-senarathne-7b96a313a/"
