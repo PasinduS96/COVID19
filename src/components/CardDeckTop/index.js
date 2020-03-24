@@ -40,7 +40,7 @@ const Index = props => {
         style={{ minWidth: "18rem" }}
       >
         <div class="card-body">
-          <h5 class="card-title">සක්‍රිය රෝගීන්</h5>
+          <h5 class="card-title">සක්‍රීය රෝගීන්</h5>
           <h1 class="card-text">
             <CountUp end={confirmed} />
           </h1>
