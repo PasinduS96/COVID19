@@ -3,7 +3,7 @@ import banner from "../../img/covid-19-coronavirus-symptoms_1820px-.jpeg";
 
 export default function what() {
   return (
-    <div style={{ fontSize: "20px", marginLeft: "100px", padding: "40px" }}>
+    <div style={{ fontSize: "20px", padding: "40px" }}>
       <img
         src={banner}
         alt="Covid"

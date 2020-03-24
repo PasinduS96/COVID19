@@ -20,7 +20,7 @@ const Index = props => {
         <Tab eventKey="home" title="මොකක්ද මේ කොරෝනා?">
           <What />
         </Tab>
-        <Tab eventKey="profile" title="අදුන ගමු">
+        <Tab eventKey="profile" title="හදුනාගමු">
           <Which />
         </Tab>
         <Tab eventKey="contact" title="අපි පරිස්සම් වෙමු!">
