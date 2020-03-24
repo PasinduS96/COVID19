@@ -6,16 +6,20 @@ import Modal from "../Contacts";
 
 const Navbar = () => {
   return (
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-        <img src={logo} className="link-logo" alt="" />
-      </a>
-      <div>
-        <a href="/HealthAdvices" class="btn btn-outline-danger">
-          <b>කොරෝනා ගැන දැනගන්න, ප්‍රවේශම් වන්න!</b>
-        </a>
-      </div>
-    </nav>
+    <div>
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <div style={{ display: "table", marginRight: "auto !important" }}>
+          <a class="navbar-brand" href="/">
+            <img src={logo} className="link-logo" alt="" />
+          </a>
+        </div>
+        <div>
+          <a href="/HealthAdvices" class="btn btn-outline-danger">
+            <b>කොරෝනා ගැන දැනගන්න, ප්‍රවේශම් වන්න!</b>
+          </a>
+        </div>
+      </nav>
+    </div>
   );
 };
 
