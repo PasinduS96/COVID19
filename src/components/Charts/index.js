@@ -14,12 +14,10 @@ const Index = props => {
   const [data, setData] = useState({});
   const [arr, setArr] = useState([]);
   const [time, setTime] = useState("");
+  const [newC, setNewC] = useState("");
 
   useEffect(() => {
     getAWS().then(data => {
-      console.log(data);
-
-      setConfirmed(data.daily[data.daily.length - 1].confirmed);
       setDeceased(data.daily[data.daily.length - 1].deceased);
       setArr(arr.push(data.daily[data.daily.length - 1].deceased));
       setPrev(data.daily[data.daily.length - 2].confirmed);
@@ -31,6 +29,8 @@ const Index = props => {
 
     getLocal().then(data => {
       setDoubt(data.data.local_total_number_of_individuals_in_hospitals);
+      setNewC(data.data.local_new_cases);
+      setConfirmed(data.data.local_active_cases);
     });
   }, []);
 
@@ -70,12 +70,8 @@ const Index = props => {
     });
   };
 
-  const newCases = () => {
-    return confirmed - prev;
-  };
-
   useEffect(() => {
-    datasetting(confirmed, newCases(), deceased, critical, recovered, doubt);
+    datasetting(confirmed, newC, deceased, critical, recovered, doubt);
   });
 
   console.log(time);

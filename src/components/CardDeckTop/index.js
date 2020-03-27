@@ -11,6 +11,7 @@ const Index = props => {
   const [critical, setCritical] = useState(0);
   const [recovered, setRecovered] = useState("");
   const [tested, setTested] = useState("");
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     getAWS().then(data => {
@@ -24,6 +25,7 @@ const Index = props => {
 
     getLocal().then(data => {
       setDoubt(data.data.local_total_number_of_individuals_in_hospitals);
+      setActive(data.data.local_active_cases);
     });
   }, []);
 
@@ -36,14 +38,27 @@ const Index = props => {
   return (
     <div class="card-group" style={{ marginTop: "8rem", marginLeft: "auto" }}>
       <div
-        class="card text-white text-center bg-danger"
-        style={{ minWidth: "18rem" }}
+        class="card text-center text-white"
+        text-center
+        style={{ minWidth: "18rem", backgroundColor: "#34495E" }}
       >
         <div class="card-body">
-          <h5 class="card-title">සක්‍රීය රෝගීන්</h5>
+          <h5 class="card-title">හදුනාගත් මුලු ආසාදිතයි​න්</h5>
           <h1 class="card-text">
             <CountUp end={confirmed} />
           </h1>
+        </div>
+
+        <div
+          class="card text-white text-center bg-danger"
+          style={{ minWidth: "18rem" }}
+        >
+          <div class="card-body">
+            <h5 class="card-title">සක්‍රීය රෝගීන්</h5>
+            <h1 class="card-text">
+              <CountUp end={active} />
+            </h1>
+          </div>
         </div>
       </div>
 
